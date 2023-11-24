@@ -1,0 +1,99 @@
+form{
+    max-width:  400px;
+    margin: 0 auto;
+  }
+  
+  .card-h2{
+      color: rgb(0, 0, 0)
+  }
+  
+  .botao{
+      border-color: #000000;
+      background-color: #c91b1b;
+      border-radius: 35px;
+  }
+  
+  input[type=text] {
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+      padding: 10px;
+      width: 100%;
+      border-radius: 5px;
+    }
+  
+    .container {
+     max-width: 800px;
+     max-height: 800px;
+     margin: 0 auto;
+     padding: 20px;
+     border: 1px solid #e4e73a;
+     box-shadow: 0 0 10px;
+     background-color: #5ADBFF;
+    }
+  
+    .container-p{
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+  
+    header{
+      font-size: 22px;
+      color: #FE9000;
+      background-color: #3C6997;
+      padding: 10px 40px;
+      text-align: center;
+    
+    }
+  
+    body{
+     
+      font-family: 'Rancho', 'cursive';
+      margin: 0;
+      padding: 0;
+      background-color: #FFDD4A;
+      
+    }
+  
+    main{
+      display: flex;
+      flex-wrap: wrap;
+      margin: 50px;
+      justify-content: space-evenly;
+    }
+  
+    footer{
+      font-size: 22px;
+      color: rgb(228, 153, 14);
+      background-color: #3C6997;
+      padding: 10px 40px;
+    }
+  
+    html {
+      margin: 0;
+      padding: 0;
+    }
+  
+    .card{
+      margin: 30px;
+      background-color: #d0d31f;
+      border: 1px solid #331feb;
+      display: inline-block;
+      overflow: hidden;
+      height: 170px;
+      width: 250px;
+      color:#000000;
+    }
+    .card h2{
+      padding: 5px;
+      margin: 0;
+    }
+    .card p{
+      padding: 5px;
+      margin: 0;
+      font-size: 18px;
+    }
+    
+  
+    
+  
+    
+  

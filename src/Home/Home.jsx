@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import './home.css' 
-
+import Card from "../Componentes/componentes";
 
 export default function Home(){
     return(
@@ -22,7 +22,7 @@ export default function Home(){
            <main>
              <Link to="/todo">Adicionar campeão</Link>
            </main>
-
+             <Card nome = {"GDAUYFGUYSYFAEUF"}/>
     <footer></footer>
      </div>
      );
