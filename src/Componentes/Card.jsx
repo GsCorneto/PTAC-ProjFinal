@@ -1,6 +1,6 @@
-export default function Card({nome}){
+export default function Card({video}){
 
     return(
-       <h1> Card {nome}</h1>
+       <h1 class ="nome"> Titúlo: {video.nome}</h1>
     )
 }
