@@ -1,4 +1,7 @@
+// import Link from "react-router-dom"
+
 export default function Card({video}){
+    console.log(video)
     const videoId = video.link.slice(17);
     return(<div>
         <iframe

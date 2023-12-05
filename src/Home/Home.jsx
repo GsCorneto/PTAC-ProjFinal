@@ -27,7 +27,7 @@ export default function Home(){
            </main>
            {listaVideo.map((video) => <Card video = {video}/>)}
              
-    <footer>Tenha uma boa experiência com gatos</footer>
+    <footer>Esses vídeos vão estourar a boca do balão</footer>
      </div>
      );
 }
