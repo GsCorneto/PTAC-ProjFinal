@@ -10,15 +10,15 @@ export default function Home(){
     return(
         <div>
         <header> 
-         <h1>Forúm Gato Brigão</h1>
+         <h1>Galeria de Vídeos MANEIROS</h1>
         </header>
 
         <nav>
     <ul>
-       <li>Vídeos de Gatos Lutadores</li>
-       <li>Todas as terças-feiras</li>
-       <li>Envie seu gato brigão</li>
-       <li>GATOS DO FIGHT</li>      
+       <li>VÍDEOS DAORINHA</li>
+       <li>Todas as quinta-feiras</li>
+       <li>Mande-me seu vídeo supimpa</li>
+       <li>Meu nome é: Ari lelek</li>      
    </ul>
 </nav>
 

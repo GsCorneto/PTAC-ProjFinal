@@ -71,7 +71,3 @@ export default function ToDo() {
         </div>
     );
 }
-
-{/* <h2>Nome: {ativ.nome}</h2>
-                 
-<h2>URL do Vídeo: {ativ.link}</h2> */}
