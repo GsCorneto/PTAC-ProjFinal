@@ -9,13 +9,13 @@ export default function ToDo() {
    const [lista, setLista] = useState((listaLocalStorage));
    const [inscricao, setInscricao] = useState(listaLocalStorage [listaLocalStorage.length - 1]?.inscricao + 1 || 1);
    const [link, setLink] = useState("");
-
+   const [desc, setDesc] = useState("");
    useEffect(() => { localStorage.setItem("Lista", JSON.stringify(lista)) },[lista]);
 
    const salvar = (e) =>{
     e.preventDefault();
     setLista([...lista, { //... serve para adicionar segmentos 
-        nome:nome, inscricao:inscricao, link:link
+        nome:nome, inscricao:inscricao, link:link, desc:desc
     }]);
     setInscricao(inscricao + 1)
     alert("Inscrito no torneio!")
@@ -30,32 +30,48 @@ export default function ToDo() {
             <div class="container">
             <form onSubmit={salvar}>
 
-                <p>Nome:</p><input type="text" onChange={(e)=>{setNome(e.target.value)}}></input>
+                <p>Nome: </p><input type="text" onChange={(e)=>{setNome(e.target.value)}}></input>
                 <br/>
-                 <p>Link:</p><input type="text" onChange={(a)=>{setLink(a.target.value)}}></input>
+                 <p>Link: </p><input type="text" onChange={(a)=>{setLink(a.target.value)}}></input>
+                <br/>
+                 <p>Descrição: </p><input type="text" onChange={(x)=>{setDesc(x.target.value)}}></input>
              <button>Adicionar</button>
 
            </form>
             </div>
-           
+      
            <br/>
-           {lista.map((ativ)=>
+           {lista.map((video)=>
              <div>
-               <ul key={ativ.inscricao}>
+               <ul key={video.inscricao}>
+                <h2>Nome: {video.nome}</h2>
+                <h2>Link: {video.link}</h2>
+                <h4>Descrição: {video.desc}</h4>
 
-                <Link to = {`/detalhe/${ativ.inscricao}`}>
-                  <li>{ativ.nome}</li>
+                <iframe
+                 width= "300"
+                 height="200"
+                 src={`https://www.youtube.com/embed/${video.link.slice(17)}`}
+                 title= "Vídeo"
+                 frameBorder={0}
+                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                 allowFullScreen
+                ></iframe>
+                
+
+               
+                <Link to = {`/detalhe/${video.inscricao}`}>
+                  <li>{video.nome}</li>
                 </Link>
-
-                <h2>Nome: {ativ.nome}</h2>
-
-                <h2>URL do Vídeo: {ativ.link}</h2>
-
                 </ul>
              </div>
            )}
 
-           <footer>Boa Luta!   <p>Retornar ao<Link to="/">Lobby</Link></p></footer>
+           <footer>Gatos são fofos e violentos   <p>Retornar ao<Link to="/">Lobby</Link></p></footer>
         </div>
     );
 }
+
+{/* <h2>Nome: {ativ.nome}</h2>
+                 
+<h2>URL do Vídeo: {ativ.link}</h2> */}
