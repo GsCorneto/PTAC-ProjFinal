@@ -21,7 +21,7 @@ export default function ToDo() {
         nome:nome, inscricao:inscricao, link:link, desc:desc
     }]);
     setInscricao(inscricao + 1)
-    alert("Inscrito no torneio!")
+    alert("Vídeo Adicionado com Sucesso!")
     navigate("/");
    };
 
@@ -49,7 +49,6 @@ export default function ToDo() {
              <div>
                <ul key={video.inscricao}>
                 <h2>Nome: {video.nome}</h2>
-                <h2>Link: {video.link}</h2>
                 <h4>Descrição: {video.desc}</h4>
 
                 <iframe
@@ -63,7 +62,6 @@ export default function ToDo() {
                 ></iframe>
                 
 
-               
                 <Link to = {`/detalhe/${video.inscricao}`}>
                   <li>{video.nome}</li>
                 </Link>

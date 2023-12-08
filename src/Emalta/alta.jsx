@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import './home.css' 
+import './alta.css' 
 import Card from "../Componentes/Card";
 
-export default function Home(){
+export default function Alta(){
   const listaVideo = JSON.parse(localStorage.getItem("Lista")) || [];
   
 
@@ -18,15 +18,14 @@ export default function Home(){
        <li>VÍDEOS DAORINHA</li>
        <li>Todas as quinta-feiras</li>
        <li>Mande-me seu vídeo supimpa</li>
-       <li>Meu nome é: Ari lelek</li>
-       <li><Link to="/alta">Vídeos em Alta</Link></li>      
+       <li>Meu nome é: Ari lelek</li>      
    </ul>
 </nav>
 
            <main>
              <Link to="/todo">Inserir vídeo Bacanudo</Link>
            </main>
-           {listaVideo.map((video) => <Card video = {video}/>)}
+           {listaVideo.slice(-4).map((video) => <Card video = {video}/>)}
              
     <footer>Esses vídeos vão estourar a boca do balão</footer>
      </div>

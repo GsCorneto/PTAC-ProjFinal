@@ -4,6 +4,7 @@ export default function Card({video}){
     console.log(video)
     const videoId = video.link.slice(17);
     return(<div>
+        <h5>{video.nome}</h5>
         <iframe
         width= "300"
         height="200"
@@ -13,8 +14,7 @@ export default function Card({video}){
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
        ></iframe>
-         <h5>{video.nome}</h5>
-         <p></p>
+         <p>{video.desc}</p>
          </div>
     )
 }
