@@ -23,7 +23,7 @@ export default function Home(){
 </nav>
 
            <main>
-             <Link to="/todo">Add Vídeo de gato brigão</Link>
+             <Link to="/todo">Inserir vídeo Bacanudo</Link>
            </main>
            {listaVideo.map((video) => <Card video = {video}/>)}
              

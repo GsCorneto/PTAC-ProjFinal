@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import './todo.css' 
 
 
@@ -12,13 +12,17 @@ export default function ToDo() {
    const [desc, setDesc] = useState("");
    useEffect(() => { localStorage.setItem("Lista", JSON.stringify(lista)) },[lista]);
 
-   const salvar = (e) =>{
+   const navigate = useNavigate();
+
+
+   const salvar = async (e) =>{
     e.preventDefault();
-    setLista([...lista, { //... serve para adicionar segmentos 
+    await setLista([...lista, { //... serve para adicionar segmentos 
         nome:nome, inscricao:inscricao, link:link, desc:desc
     }]);
     setInscricao(inscricao + 1)
     alert("Inscrito no torneio!")
+    navigate("/");
    };
 
          
